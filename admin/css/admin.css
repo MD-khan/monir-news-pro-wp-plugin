@@ -1,0 +1,391 @@
+/* =========================================================
+   MonirNews Pro — Admin Stylesheet v2.0.0
+   ========================================================= */
+
+/* Wrapper */
+.mnp-admin-wrap {
+	max-width: 1200px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Header */
+.mnp-admin-header {
+	background: #2c3e50;
+	color: white;
+	padding: 1.5rem 2rem;
+	margin: -10px -20px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 4px solid #c0392b;
+}
+
+.mnp-admin-header h1 {
+	color: white;
+	margin: 0;
+	font-size: 1.4rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.mnp-pro-badge {
+	background: #f39c12;
+	color: #2c3e50;
+	font-size: 0.65rem;
+	font-weight: 800;
+	padding: 2px 8px;
+	border-radius: 3px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+/* Sub navigation */
+.mnp-subnav {
+	display: flex;
+	gap: 0;
+	background: white;
+	border: 1px solid #ddd;
+	border-top: none;
+	border-radius: 0 0 6px 6px;
+	overflow: hidden;
+	margin-bottom: 1.5rem;
+}
+
+.mnp-subnav a {
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #555;
+	font-size: 0.875rem;
+	font-weight: 500;
+	border-right: 1px solid #eee;
+	transition: all 0.15s;
+	white-space: nowrap;
+}
+
+.mnp-subnav a:hover {
+	background: #f8f9fa;
+	color: #2c3e50;
+}
+
+.mnp-subnav a.active {
+	background: #c0392b;
+	color: white;
+	font-weight: 700;
+}
+
+/* Cards */
+.mnp-card {
+	background: white;
+	border: 1px solid #e0e0e0;
+	border-radius: 8px;
+	margin-bottom: 1.5rem;
+	overflow: hidden;
+}
+
+.mnp-card-header {
+	padding: 1rem 1.5rem;
+	border-bottom: 1px solid #f0f0f0;
+	background: #fafafa;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.mnp-card-header h2 {
+	margin: 0;
+	font-size: 1rem;
+	color: #2c3e50;
+}
+
+.mnp-card-body {
+	padding: 1.5rem;
+}
+
+/* Stats grid */
+.mnp-stats-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.mnp-stat-card {
+	background: white;
+	border: 1px solid #e0e0e0;
+	border-radius: 8px;
+	padding: 1.25rem;
+	text-align: center;
+}
+
+.mnp-stat-number {
+	font-size: 2rem;
+	font-weight: 800;
+	color: #2c3e50;
+	display: block;
+}
+
+.mnp-stat-label {
+	font-size: 0.8rem;
+	color: #888;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-top: 0.25rem;
+}
+
+.mnp-stat-card.active   .mnp-stat-number { color: #27ae60; }
+.mnp-stat-card.expired  .mnp-stat-number { color: #c0392b; }
+.mnp-stat-card.scheduled .mnp-stat-number { color: #f39c12; }
+
+/* Ads table */
+.mnp-ads-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.875rem;
+}
+
+.mnp-ads-table th {
+	background: #f8f9fa;
+	padding: 10px 12px;
+	text-align: left;
+	font-weight: 700;
+	color: #555;
+	border-bottom: 2px solid #e0e0e0;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.mnp-ads-table td {
+	padding: 12px;
+	border-bottom: 1px solid #f0f0f0;
+	vertical-align: middle;
+}
+
+.mnp-ads-table tr:hover td {
+	background: #fafafa;
+}
+
+.mnp-ad-thumb {
+	width: 80px;
+	height: 45px;
+	object-fit: cover;
+	border-radius: 4px;
+	border: 1px solid #eee;
+}
+
+.mnp-ad-thumb-placeholder {
+	width: 80px;
+	height: 45px;
+	background: #f0f0f0;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.2rem;
+}
+
+/* Status badges */
+.mnp-status {
+	display: inline-block;
+	padding: 3px 10px;
+	border-radius: 20px;
+	font-size: 0.75rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.mnp-status.active    { background: #d4edda; color: #155724; }
+.mnp-status.paused    { background: #fff3cd; color: #856404; }
+.mnp-status.scheduled { background: #cce5ff; color: #004085; }
+.mnp-status.expired   { background: #f8d7da; color: #721c24; }
+.mnp-status.inactive  { background: #e9ecef; color: #495057; }
+.mnp-status.publish   { background: #d4edda; color: #155724; }
+
+/* Form */
+.mnp-form-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.5rem;
+}
+
+.mnp-form-field {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.mnp-form-field.full {
+	grid-column: 1 / -1;
+}
+
+.mnp-form-field label {
+	font-weight: 600;
+	font-size: 0.875rem;
+	color: #2c3e50;
+}
+
+.mnp-form-field input[type="text"],
+.mnp-form-field input[type="url"],
+.mnp-form-field input[type="number"],
+.mnp-form-field input[type="datetime-local"],
+.mnp-form-field select,
+.mnp-form-field textarea,
+.mnp-textarea {
+	padding: 8px 12px;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	font-size: 0.9rem;
+	transition: border-color 0.2s;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.mnp-form-field input:focus,
+.mnp-form-field select:focus,
+.mnp-form-field textarea:focus {
+	outline: none;
+	border-color: #c0392b;
+	box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1);
+}
+
+.mnp-form-field .description {
+	font-size: 0.8rem;
+	color: #888;
+}
+
+/* Media upload area */
+.mnp-media-upload {
+	border: 2px dashed #ddd;
+	border-radius: 8px;
+	padding: 2rem;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.2s;
+	background: #fafafa;
+}
+
+.mnp-media-upload:hover {
+	border-color: #c0392b;
+	background: #fff5f5;
+}
+
+.mnp-media-preview {
+	margin-top: 1rem;
+	display: none;
+}
+
+.mnp-media-preview img,
+.mnp-media-preview video {
+	max-width: 300px;
+	max-height: 200px;
+	border-radius: 4px;
+	border: 1px solid #eee;
+}
+
+/* Toggle switch */
+.mnp-toggle {
+	position: relative;
+	display: inline-block;
+	width: 44px;
+	height: 24px;
+	flex-shrink: 0;
+}
+
+.mnp-toggle input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.mnp-toggle-slider {
+	position: absolute;
+	cursor: pointer;
+	inset: 0;
+	background: #ccc;
+	border-radius: 24px;
+	transition: 0.3s;
+}
+
+.mnp-toggle-slider::before {
+	content: '';
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	left: 3px;
+	bottom: 3px;
+	background: white;
+	border-radius: 50%;
+	transition: 0.3s;
+}
+
+.mnp-toggle input:checked + .mnp-toggle-slider              { background: #27ae60; }
+.mnp-toggle input:checked + .mnp-toggle-slider::before      { transform: translateX( 20px ); }
+
+/* Buttons */
+.mnp-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 7px 16px;
+	border-radius: 6px;
+	font-size: 0.875rem;
+	font-weight: 600;
+	cursor: pointer;
+	text-decoration: none;
+	border: none;
+	transition: all 0.2s;
+	line-height: 1.4;
+}
+
+.mnp-btn-primary          { background: #c0392b; color: white; }
+.mnp-btn-primary:hover    { background: #a93226; color: white; }
+.mnp-btn-secondary        { background: white; color: #555; border: 1px solid #ddd; }
+.mnp-btn-secondary:hover  { background: #f8f9fa; color: #333; border-color: #ccc; }
+.mnp-btn-danger           { background: white; color: #c0392b; border: 1px solid #c0392b; }
+.mnp-btn-danger:hover     { background: #c0392b; color: white; }
+.mnp-btn-sm               { padding: 4px 10px; font-size: 0.8rem; }
+
+/* Table action row */
+.mnp-table-actions {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/* Empty state */
+.mnp-empty {
+	text-align: center;
+	padding: 3rem;
+	color: #888;
+}
+
+.mnp-empty-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.mnp-empty h3 {
+	font-size: 1.1rem;
+	color: #555;
+	margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media ( max-width: 1024px ) {
+	.mnp-stats-grid  { grid-template-columns: repeat( 3, 1fr ); }
+	.mnp-form-grid   { grid-template-columns: 1fr; }
+}
+
+@media ( max-width: 768px ) {
+	.mnp-stats-grid  { grid-template-columns: repeat( 2, 1fr ); }
+	.mnp-subnav      { flex-wrap: wrap; }
+	.mnp-subnav a    { font-size: 0.8rem; padding: 8px 12px; }
+}
+
+@media ( max-width: 480px ) {
+	.mnp-stats-grid  { grid-template-columns: 1fr 1fr; }
+	.mnp-admin-header { padding: 1rem; }
+}

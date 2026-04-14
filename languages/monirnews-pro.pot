@@ -1,0 +1,17 @@
+# Copyright (C) 2026 Monir Tech Solutions
+# This file is distributed under the same license as the MonirNews Pro package.
+# Md Monirujaman Khan <info@monirtechsolutions.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MonirNews Pro 2.0.0\n"
+"Report-Msgid-Bugs-To: info@monirtechsolutions.com\n"
+"POT-Creation-Date: 2026-04-13T00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: MonirNews Pro POT file\n"
+"X-Domain: monirnews-pro\n"
