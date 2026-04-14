@@ -28,7 +28,7 @@ class MNP_Ad_Display {
 	 */
 	public function __construct() {
 		add_shortcode( 'mnp_ad',                          array( $this, 'shortcode' ) );
-		add_filter(    'monirnews_ad_zone',               array( $this, 'render_zone' ), 10, 1 );
+		add_filter(    'monirnews_ad_zone',               array( $this, 'render_zone' ), 10, 2 );
 		add_action(    'wp_enqueue_scripts',              array( $this, 'enqueue_scripts' ) );
 		add_action(    'wp_ajax_mnp_impression',          array( $this, 'handle_impression' ) );
 		add_action(    'wp_ajax_nopriv_mnp_impression',   array( $this, 'handle_impression' ) );
@@ -94,14 +94,18 @@ class MNP_Ad_Display {
 	/**
 	 * Filter callback: return ad HTML for a given zone.
 	 *
-	 * Called by the theme with apply_filters('monirnews_ad_zone', $zone).
+	 * Called by the theme with apply_filters( 'monirnews_ad_zone', '', $zone ).
+	 * Standard WP "overrideable content" pattern: $output starts empty and this
+	 * hook replaces it with rendered ad HTML when an active ad exists.
 	 *
 	 * @since 2.0.0
-	 * @param string $zone Ad zone slug.
-	 * @return string Ad HTML.
+	 * @param string $output Existing output (empty string passed by theme).
+	 * @param string $zone   Ad zone slug.
+	 * @return string Ad HTML or original $output when no active ad found.
 	 */
-	public function render_zone( $zone ) {
-		return $this->get_ad_html( sanitize_key( $zone ) );
+	public function render_zone( $output, $zone ) {
+		$ad_html = $this->get_ad_html( sanitize_key( $zone ) );
+		return '' !== $ad_html ? $ad_html : $output;
 	}
 
 	/**
